@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useProfileStore = defineStore('profile', {
   state: () => ({
-    name: 'Twoje imię i nazwisko',
+    name: 'Tomasz Burzyński',
     role: 'Twoja specjalizacja lub rola',
     location: 'Twoje miasto',
     bio: 'Kilka zdań o Tobie, Twoim doświadczeniu i tym, czym chcesz się podzielić.',
