@@ -3,13 +3,13 @@ import { defineStore } from 'pinia'
 export const useProfileStore = defineStore('profile', {
   state: () => ({
     name: 'Tomasz Burzyński',
-    role: 'Twoja specjalizacja lub rola',
-    location: 'Twoje miasto',
-    bio: 'Kilka zdań o Tobie, Twoim doświadczeniu i tym, czym chcesz się podzielić.',
+    role: 'role.value',
+    location: 'home.value',
+    bio: 'bio.value',
     links: [
-      { label: 'GitHub', href: 'https://github.com/twoj-login' },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/twoj-profil' },
-      { label: 'E-mail', href: 'mailto:twoj@email.com' },
+      { label: 'GitHub', href: 'https://github.com/Kemott' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tburzynski' },
+      { label: 'E-mail', href: 'mailto:tomasz.burzynski.91@email.com' },
     ],
   }),
 })

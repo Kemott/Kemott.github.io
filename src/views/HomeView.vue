@@ -1,6 +1,10 @@
 <script setup>
 import { useProfileStore } from '../stores/profile'
+import { useI18n } from 'vue-i18n';
 
+
+const { t, locale } = useI18n()
+locale.value = 'pl'
 const profile = useProfileStore()
 </script>
 
@@ -13,12 +17,12 @@ const profile = useProfileStore()
             <div class="card-body p-4 p-md-5">
               <p class="eyebrow mb-3">Osobista wizytówka</p>
               <h1 class="display-4 fw-bold mb-2">{{ profile.name }}</h1>
-              <p class="lead text-secondary mb-4">{{ profile.role }}</p>
-              <p class="profile-bio mb-4">{{ profile.bio }}</p>
+              <p class="lead text-secondary mb-4">{{ t(profile.role) }}</p>
+              <p class="profile-bio mb-4">{{ t(profile.bio) }}</p>
 
               <p class="text-secondary mb-4">
                 <span aria-hidden="true">⌖</span>
-                {{ profile.location }}
+                {{ t(profile.location) }}
               </p>
 
               <nav class="d-flex flex-wrap gap-2" aria-label="Linki do profili">

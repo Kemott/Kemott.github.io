@@ -1,0 +1,14 @@
+{
+    "role": {
+        "label": "Aktualne stanowisko: ",
+        "value": "Pracownik działu planowania w PGO S.A. Odlewnia Żeliwa oddział w Śremie"
+    },
+    "home": {
+        "label": "Miejsce zamieszkania",
+        "value": "Śrem, Wielkopolska"
+    },
+    "bio": {
+        "label": "Biografia",
+        "value": "Z wykształcenia informatyk, z zawodu - gdzie los poniesie :) Ale w każdej pracy wspomagam swoją wiedzą informatyczną i robię to z pasją."
+    }
+}

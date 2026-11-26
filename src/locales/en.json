@@ -1,0 +1,14 @@
+{
+    "role": {
+        "label": "Current role: ",
+        "value": "Employee in the planning department at PGO S.A. Iron Foundry, Śrem branch"
+    },
+    "home": {
+        "label": "Home",
+        "value": "Śrem, Greater Poland"
+    },
+    "bio": {
+        "label": "Biography",
+        "value": "By education, I am an IT specialist; by profession—well, wherever life takes me :) But in every job, I leverage my IT knowledge, and I do so with passion."
+    }
+}
