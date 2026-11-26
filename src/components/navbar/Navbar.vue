@@ -24,7 +24,7 @@
                         <router-link class="nav-link" aria-current="page" :to="{name: 'portfolio'}">{{ t('navbar.items.portfolio.label') }}</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <router-link class="nav-link" aria-current="page" :to="{name: 'cv'}">CV</router-link>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
