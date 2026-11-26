@@ -20,5 +20,3 @@ Workflow `.github/workflows/deploy.yml` buduje stronę i publikuje ją po każdy
 Adres bazowy Vite jest ustawiany automatycznie dla repozytorium projektu. Dla repozytorium `username.github.io` używany jest katalog główny.
 
 Bootstrap 6 jest obecnie używany w wersji prerelease `6.0.0-alpha.2`.
-
-Test
