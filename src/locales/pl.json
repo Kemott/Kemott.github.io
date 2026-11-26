@@ -10,5 +10,12 @@
     "bio": {
         "label": "Biografia",
         "value": "Z wykształcenia informatyk, z zawodu - gdzie los poniesie :) Ale w każdej pracy wspomagam swoją wiedzą informatyczną i robię to z pasją."
+    },
+    "navbar": {
+        "items": {
+            "portfolio": {
+                "label": "Portfolio"
+            }
+        }
     }
 }

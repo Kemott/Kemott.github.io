@@ -10,5 +10,12 @@
     "bio": {
         "label": "Biography",
         "value": "By education, I am an IT specialist; by profession—well, wherever life takes me :) But in every job, I leverage my IT knowledge, and I do so with passion."
+    },
+    "navbar": {
+        "items": {
+            "portfolio": {
+                "label": "Portfolio"
+            }
+        }
     }
 }
