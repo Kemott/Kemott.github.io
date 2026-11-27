@@ -72,5 +72,12 @@
                 "label": "Contact"
             }
         }
+    },
+    "portfolio": {
+        "screenshot": {
+            "enlarge": "Enlarge screenshot: {title}",
+            "dialog": "Enlarged screenshot: {title}",
+            "close": "Close enlarged screenshot"
+        }
     }
 }

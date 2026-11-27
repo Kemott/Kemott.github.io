@@ -1,34 +1,40 @@
 import { defineStore } from 'pinia'
 
+const screenshots = import.meta.glob('../assets/portfolio/screenshots/*', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+})
+
 export const useProjectsStore = defineStore('projects', {
   state: () => ({
     projects: [
       {
-        id: 'process-management',
+        id: 'planist-helper',
         featured: true,
-        preview: 'dashboard',
+        screenshot: 'planisthelper.webp',
         category: {
-          pl: 'Oprogramowanie biznesowe',
-          en: 'Business software',
+          pl: 'Wsparcie zarządzania',
+          en: 'Management Support',
         },
         title: {
-          pl: 'System zarządzania procesami',
-          en: 'Process management system',
+          pl: 'Program wspierający planowanie produkcji w odlewni żeliwa (do zastosowań własnych)',
+          en: 'Software supporting production planning in an iron foundry (for internal use)',
         },
         description: {
-          pl: 'Aplikacja wspierająca organizację pracy, zarządzanie danymi i planowanie procesów.',
-          en: 'An application supporting work organization, data management, and process planning.',
+          pl: 'Aplikacja pomagająca zebrać dane z bardzo wielu źródeł i przetwarzająca je, żeby wskazać aktualny stan magazynów i produkcji. Podstawowe narzędzie, jakiego potrzebują planiści w mojej aktualnej firmie.',
+          en: 'An application that helps collect data from a wide variety of sources and processes it to show the current status of inventory and production. It is an essential tool for the planners at my current company.',
         },
         tags: ['Python', 'Django', 'Vue.js'],
         previewLabel: {
-          pl: '01 / SYSTEM BIZNESOWY',
-          en: '01 / BUSINESS SYSTEM',
+          pl: '01 / WSPARCIE PLANOWANIA PRODUKCJI',
+          en: '01 / PRODUCTION PLANNING SUPPORT',
         },
       },
       {
         id: 'analytics-tools',
         featured: true,
-        preview: 'analytics',
+        screenshot: null,
         category: {
           pl: 'Dane i automatyzacja',
           en: 'Data & automation',
@@ -52,5 +58,14 @@ export const useProjectsStore = defineStore('projects', {
   getters: {
     allProjects: (state) => state.projects,
     featuredProjects: (state) => state.projects.filter((project) => project.featured),
+    getScreenshotUrl: () => (filename) => {
+      if (!filename) return null
+
+      const entry = Object.entries(screenshots).find(([path]) =>
+        path.split('/').pop() === filename
+      )
+
+      return entry?.[1] ?? null
+    },
   },
 })

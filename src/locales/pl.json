@@ -72,5 +72,12 @@
                 "label": "Kontakt"
             }
         }
+    },
+    "portfolio": {
+        "screenshot": {
+            "enlarge": "Powiększ zrzut ekranu: {title}",
+            "dialog": "Powiększony zrzut ekranu: {title}",
+            "close": "Zamknij powiększony zrzut ekranu"
+        }
     }
 }

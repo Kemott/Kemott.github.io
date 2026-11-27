@@ -1,6 +1,7 @@
 <script setup>
     import { useI18n } from 'vue-i18n'
     import { useProjectsStore } from '../../stores/projects'
+    import ProjectScreenshot from '../ProjectScreenshot.vue'
 
     const { t, locale } = useI18n()
     const projectsStore = useProjectsStore()
@@ -26,12 +27,12 @@
                     class="project-item"
                     :class="{ 'project-reverse': index % 2 === 1 }"
                 >
-                    <div v-if="project.preview === 'dashboard'" class="project-preview preview-one">
-                        <div class="mock-window"><div class="mock-header"><span></span><span></span><span></span><small>SYSTEM / DASHBOARD</small></div><div class="mock-content"><div class="mock-sidebar"></div><div class="mock-main"><div class="mock-block"></div><div class="mock-block short"></div><div class="mock-chart"></div></div></div></div>
-                        <span class="preview-label">{{ localized(project.previewLabel) }}</span>
-                    </div>
-                    <div v-else class="project-preview preview-two">
-                        <div class="data-visual"><span>DATA ANALYSIS</span><div class="data-bars"><i v-for="height in [35,65,48,85,58,95,72]" :key="height" :style="{ '--height': height + '%' }"></i></div><div class="data-caption">PROCESS / PERFORMANCE / INSIGHTS</div></div>
+                    <div class="project-preview">
+                        <ProjectScreenshot
+                            v-if="project.screenshot"
+                            :src="projectsStore.getScreenshotUrl(project.screenshot)"
+                            :alt="localized(project.title)"
+                        />
                         <span class="preview-label">{{ localized(project.previewLabel) }}</span>
                     </div>
                     <div class="project-info">
