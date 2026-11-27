@@ -14,34 +14,26 @@
                 <span class="navbar-toggler-icon" aria-hidden="true"></span>
             </button>
             <dialog class="drawer drawer-end" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
-            <div class="drawer-header">
-                <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
-            </div>
-            <div class="drawer-body md:mb-0">
-                <ul class="nav navbar-nav me-auto">
-                    <li class="nav-item">
-                        <router-link class="nav-link" aria-current="page" :to="{name: 'portfolio'}">{{ t('navbar.items.portfolio.label') }}</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" aria-current="page" :to="{name: 'cv'}">CV</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                        Menu
-                        </button>
-                        <div class="menu">
-                        <a class="menu-item" href="#">Action</a>
-                        <a class="menu-item" href="#">Another action</a>
-                        <hr class="menu-divider">
-                        <a class="menu-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body md:mb-0">
+                    <ul class="nav navbar-nav me-auto">
+                        <li class="nav-item">
+                            <router-link class="nav-link" aria-current="page" :to="{name: 'portfolio'}">{{ t('navbar.items.portfolio.label') }}</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" aria-current="page" :to="{name: 'cv'}">CV</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" aria-current="page" :to="{name: 'services'}">{{ t('navbar.items.services.label') }}</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" aria-current="page" :to="{name: 'contact'}">{{ t('navbar.items.contact.label') }}</router-link>
+                        </li>
+                    </ul>
+                </div>
             </dialog>
         </div>
     </nav>

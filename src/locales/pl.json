@@ -15,6 +15,12 @@
         "items": {
             "portfolio": {
                 "label": "Portfolio"
+            },
+            "services": {
+                "label": "Jak mogę Ci pomóc?"
+            },
+            "contact": {
+                "label": "Kontakt"
             }
         }
     }
