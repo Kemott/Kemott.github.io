@@ -5,7 +5,49 @@
     },
     "home": {
         "label": "Miejsce zamieszkania",
-        "value": "Śrem, Wielkopolska"
+        "value": "Śrem, Wielkopolska",
+        "hero": {
+            "description": "Projektuję i rozwijam oprogramowanie, które porządkuje procesy, automatyzuje pracę i zamienia dane w konkretne decyzje.",
+            "projects": "Zobacz projekty",
+            "contact": "Porozmawiajmy"
+        },
+        "footer": { "location": "PL" },
+        "intro": {
+            "title": "Technologia ma",
+            "accent": "rozwiązywać problemy. Nie tworzyć nowe.",
+            "textOne": "Wierzę w oprogramowanie, które ma konkretny cel. Systemy powinny upraszczać codzienną pracę, eliminować powtarzalne czynności i zapewniać dostęp do informacji wtedy, kiedy są potrzebne.",
+            "textTwo": "Łączę programowanie, analizę danych i myślenie procesowe, aby projektować rozwiązania dopasowane do rzeczywistych potrzeb biznesu.",
+            "link": "Więcej o mnie"
+        },
+        "services": {
+            "title": "Obszary działalności",
+            "link": "Wszystkie usługi",
+            "items": [
+                { "title": "Automatyzacja procesów", "text": "Eliminowanie powtarzalnych zadań, integracja narzędzi i usprawnianie przepływu informacji.", "tagOne": "WORKFLOW", "tagTwo": "INTEGRATION" },
+                { "title": "Aplikacje biznesowe", "text": "Dedykowane aplikacje internetowe, systemy zarządzania i narzędzia dopasowane do specyfiki działalności.", "tagOne": "WEB APPS", "tagTwo": "ERP / CRM" },
+                { "title": "Analiza danych", "text": "Przetwarzanie, porządkowanie i wizualizacja danych oraz narzędzia wspierające podejmowanie decyzji.", "tagOne": "DATA", "tagTwo": "ANALYTICS" },
+                { "title": "Własne oprogramowanie", "text": "Projektowanie i rozwijanie narzędzi, produktów cyfrowych oraz rozwiązań odpowiadających na konkretne problemy.", "tagOne": "PRODUCTS", "tagTwo": "SOFTWARE" }
+            ]
+        },
+        "projects": {
+            "title": "Wybrane projekty",
+            "link": "Pełne portfolio",
+            "view": "Zobacz projekt",
+            "business": { "title": "System zarządzania procesami", "text": "Aplikacja wspierająca organizację pracy, zarządzanie danymi i planowanie procesów." },
+            "data": { "title": "Narzędzia analityczne", "text": "Rozwiązania do agregowania danych, automatycznego przetwarzania informacji i wspomagania decyzji." }
+        },
+        "process": {
+            "title": "Od problemu",
+            "accent": "do działającego systemu",
+            "items": [
+                { "title": "Analiza", "text": "Poznanie problemu, potrzeb użytkowników i istniejących procesów." },
+                { "title": "Projektowanie", "text": "Opracowanie koncepcji, architektury i zakresu rozwiązania." },
+                { "title": "Implementacja", "text": "Budowa, integracja i testowanie zaprojektowanego oprogramowania." },
+                { "title": "Rozwój", "text": "Utrzymanie, optymalizacja i dostosowanie rozwiązania do zmieniających się potrzeb." }
+            ]
+        },
+        "technology": { "title": "Technologie są", "accent": "narzędziem.", "text": "Dobieram technologie do problemu, a nie problem do technologii." },
+        "contact": { "title": "Masz problem.", "accent": "Zaprojektujmy rozwiązanie.", "text": "Porozmawiajmy o procesach, które można usprawnić, danych, które warto wykorzystać, i oprogramowaniu, które może zrobić różnicę.", "link": "Skontaktuj się" }
     },
     "bio": {
         "label": "Biografia",
@@ -18,6 +60,8 @@
             "english": "Angielski"
         },
         "items": {
+            "about": "O mnie",
+            "cv": "Doświadczenie",
             "portfolio": {
                 "label": "Portfolio"
             },

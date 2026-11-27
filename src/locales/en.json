@@ -5,7 +5,49 @@
     },
     "home": {
         "label": "Home",
-        "value": "Śrem, Greater Poland"
+        "value": "Śrem, Greater Poland",
+        "hero": {
+            "description": "I design and develop software that organizes processes, automates work, and turns data into concrete decisions.",
+            "projects": "View projects",
+            "contact": "Let's talk"
+        },
+        "footer": { "location": "PL" },
+        "intro": {
+            "title": "Technology should",
+            "accent": "solve problems. Not create new ones.",
+            "textOne": "I believe in software with a clear purpose. Systems should simplify everyday work, remove repetitive tasks, and provide information when it is needed.",
+            "textTwo": "I combine programming, data analysis, and process thinking to design solutions tailored to real business needs.",
+            "link": "More about me"
+        },
+        "services": {
+            "title": "Areas of expertise",
+            "link": "All services",
+            "items": [
+                { "title": "Process automation", "text": "Removing repetitive tasks, integrating tools, and improving information flow.", "tagOne": "WORKFLOW", "tagTwo": "INTEGRATION" },
+                { "title": "Business applications", "text": "Custom web applications, management systems, and tools tailored to a company's operations.", "tagOne": "WEB APPS", "tagTwo": "ERP / CRM" },
+                { "title": "Data analysis", "text": "Processing, organizing, and visualizing data with tools that support decision-making.", "tagOne": "DATA", "tagTwo": "ANALYTICS" },
+                { "title": "Custom software", "text": "Designing and developing tools, digital products, and solutions for specific problems.", "tagOne": "PRODUCTS", "tagTwo": "SOFTWARE" }
+            ]
+        },
+        "projects": {
+            "title": "Selected projects",
+            "link": "Full portfolio",
+            "view": "View project",
+            "business": { "title": "Process management system", "text": "An application supporting work organization, data management, and process planning." },
+            "data": { "title": "Analytics tools", "text": "Solutions for aggregating data, automatically processing information, and supporting decisions." }
+        },
+        "process": {
+            "title": "From a problem",
+            "accent": "to a working system",
+            "items": [
+                { "title": "Analysis", "text": "Understanding the problem, user needs, and existing processes." },
+                { "title": "Design", "text": "Creating the concept, architecture, and scope of the solution." },
+                { "title": "Implementation", "text": "Building, integrating, and testing the designed software." },
+                { "title": "Growth", "text": "Maintaining, optimizing, and adapting the solution to changing needs." }
+            ]
+        },
+        "technology": { "title": "Technology is", "accent": "a tool.", "text": "I choose technology for the problem, not a problem for the technology." },
+        "contact": { "title": "Have a problem?", "accent": "Let's design a solution.", "text": "Let's talk about processes that can be improved, data that can be useful, and software that can make a difference.", "link": "Get in touch" }
     },
     "bio": {
         "label": "Biography",
@@ -18,6 +60,8 @@
             "english": "English"
         },
         "items": {
+            "about": "About",
+            "cv": "Experience",
             "portfolio": {
                 "label": "Portfolio"
             },

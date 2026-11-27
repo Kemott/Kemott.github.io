@@ -1,56 +1,47 @@
 <script setup>
-    import { useProfileStore } from '../../stores/profile'
-    import { useI18n } from 'vue-i18n';
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useProfileStore } from '../../stores/profile'
 
-    const { t, locale } = useI18n()
-    const profile = useProfileStore()
+const { t, locale } = useI18n()
+const profile = useProfileStore()
+const menuOpen = ref(false)
 
-    function saveLanguage() {
-        localStorage.setItem('locale', locale.value)
-    }
+function changeLanguage(language) {
+    locale.value = language
+    localStorage.setItem('locale', language)
+}
 </script>
 
 <template>
-    <nav class="navbar md:navbar-expand bg-1">
-        <div class="container-fluid">
-            <router-link :to="{name: 'home'}" class="navbar-brand">{{ profile.name }}</router-link>
-            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" aria-hidden="true"></span>
-            </button>
-            <dialog class="drawer drawer-end" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
-                <div class="drawer-header">
-                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+    <header class="site-header">
+        <div class="container header-inner">
+            <router-link :to="{ name: 'home' }" class="brand">
+                <span class="brand-symbol">TB.</span>
+                <span class="brand-name">
+                    <strong>{{ profile.name }}</strong>
+                    <small>SOFTWARE & ENGINEERING</small>
+                </span>
+            </router-link>
+
+            <div class="header-actions">
+                <div class="language-switcher" :aria-label="t('navbar.language.label')">
+                    <button type="button" class="language-option" :class="{ active: locale === 'pl' }" :aria-pressed="locale === 'pl'" @click="changeLanguage('pl')">PL</button>
+                    <span class="language-divider">/</span>
+                    <button type="button" class="language-option" :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="changeLanguage('en')">EN</button>
                 </div>
-                <div class="drawer-body md:mb-0">
-                    <ul class="nav navbar-nav me-auto">
-                        <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" :to="{name: 'portfolio'}">{{ t('navbar.items.portfolio.label') }}</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" :to="{name: 'cv'}">CV</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" :to="{name: 'services'}">{{ t('navbar.items.services.label') }}</router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" :to="{name: 'contact'}">{{ t('navbar.items.contact.label') }}</router-link>
-                        </li>
-                    </ul>
-                    <form class="ms-md-3 mt-3 mt-md-0" :aria-label="t('navbar.language.label')">
-                        <label class="visually-hidden" for="language-select">{{ t('navbar.language.label') }}</label>
-                        <select
-                            id="language-select"
-                            class="form-select"
-                            v-model="locale"
-                            @change="saveLanguage"
-                        >
-                            <option value="pl">{{ t('navbar.language.polish') }}</option>
-                            <option value="en">{{ t('navbar.language.english') }}</option>
-                        </select>
-                    </form>
-                </div>
-            </dialog>
+                <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-controls="main-navigation" @click="menuOpen = !menuOpen">
+                    <span></span><span></span>
+                </button>
+            </div>
+
+            <nav id="main-navigation" class="main-navigation" :class="{ open: menuOpen }">
+                <a href="/#about" @click="menuOpen = false">{{ t('navbar.items.about') }}</a>
+                <router-link :to="{ name: 'portfolio' }" @click="menuOpen = false">{{ t('navbar.items.portfolio.label') }}</router-link>
+                <router-link :to="{ name: 'services' }" @click="menuOpen = false">{{ t('navbar.items.services.label') }}</router-link>
+                <router-link :to="{ name: 'cv' }" @click="menuOpen = false">{{ t('navbar.items.cv') }}</router-link>
+                <router-link :to="{ name: 'contact' }" class="nav-contact" @click="menuOpen = false">{{ t('navbar.items.contact.label') }} <span>↗</span></router-link>
+            </nav>
         </div>
-    </nav>
+    </header>
 </template>

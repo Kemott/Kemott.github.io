@@ -6,7 +6,5 @@
 
 <template>
   <Navbar />
-  <div class="container-fluid">
-    <RouterView />
-  </div>
+  <RouterView />
 </template>
