@@ -2,7 +2,5 @@
 </script>
 
 <template>
-  <div class="container-fluid">
-    Tu będzie główna zawartość
-  </div>
+  Main
 </template>

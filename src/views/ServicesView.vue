@@ -2,7 +2,5 @@
 </script>
 
 <template>
-  <div class="container-fluid">
-    Tu będą usługi
-  </div>
+  Tu będą usługi
 </template>

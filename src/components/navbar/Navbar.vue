@@ -4,11 +4,15 @@
 
     const { t, locale } = useI18n()
     const profile = useProfileStore()
+
+    function saveLanguage() {
+        localStorage.setItem('locale', locale.value)
+    }
 </script>
 
 <template>
     <nav class="navbar md:navbar-expand bg-1">
-        <div class="container-fluid">
+        <div class="container-fluid px-10">
             <router-link :to="{name: 'home'}" class="navbar-brand">{{ profile.name }}</router-link>
             <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" aria-hidden="true"></span>
@@ -33,6 +37,18 @@
                             <router-link class="nav-link" aria-current="page" :to="{name: 'contact'}">{{ t('navbar.items.contact.label') }}</router-link>
                         </li>
                     </ul>
+                    <form class="ms-md-3 mt-3 mt-md-0" :aria-label="t('navbar.language.label')">
+                        <label class="visually-hidden" for="language-select">{{ t('navbar.language.label') }}</label>
+                        <select
+                            id="language-select"
+                            class="form-select"
+                            v-model="locale"
+                            @change="saveLanguage"
+                        >
+                            <option value="pl">{{ t('navbar.language.polish') }}</option>
+                            <option value="en">{{ t('navbar.language.english') }}</option>
+                        </select>
+                    </form>
                 </div>
             </dialog>
         </div>

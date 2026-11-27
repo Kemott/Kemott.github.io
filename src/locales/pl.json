@@ -12,6 +12,11 @@
         "value": "Z wykształcenia informatyk, z zawodu - gdzie los poniesie :) Ale w każdej pracy wspomagam swoją wiedzą informatyczną i robię to z pasją."
     },
     "navbar": {
+        "language": {
+            "label": "Język strony",
+            "polish": "Polski",
+            "english": "Angielski"
+        },
         "items": {
             "portfolio": {
                 "label": "Portfolio"
